@@ -21,13 +21,12 @@
     "path": "^0.12.7",
     "string-loader": "0.0.1",
     "webpack": "^4.32.2",
-    "webpack-stream": "^5.2.1"
+    "webpack-stream": "^5.2.1",
+    "yo3": "^3.1.8"
   },
   "scripts": {
     "dev": "./node_modules/.bin/gulp -f gulpfile-dev.js",
     "prod": "gulp -f gulpfile-prod.js"
-  },
-  "dependencies": {
-    "yo": "^2.0.6"
   }
+
 }
