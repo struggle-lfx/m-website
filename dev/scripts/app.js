@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("//commonjs规范\n//const name = require('./controllers/name')\nvar indexTpl = __webpack_require__(/*! ./views/index.html */ \"./src/views/index.html\");\n\nvar renderedIndexTpl = template.render(indexTpl, {}); // 将模板源代码编译成函数并立刻执行 第一个参数 来源 第二个参数{里面传数据} \n\ndocument.querySelector('#app').innerHTML = renderedIndexTpl; //把内容放到首页去\n//ES6模块化\n// import{name} from './controllers/name'\n\n//# sourceURL=webpack:///./src/app.js?");
+eval("//commonjs规范\n//const name = require('./controllers/name')\nvar indexTpl = __webpack_require__(/*! ./views/index.html */ \"./src/views/index.html\");\n\nvar renderedIndexTpl = template.render(indexTpl, {}); // 将模板源代码编译成函数并立刻执行 第一个参数 来源 第二个参数{里面传数据} \n\ndocument.querySelector('#app').innerHTML = renderedIndexTpl; //把内容放到首页内\n//ES6模块化\n// import{name} from './controllers/name'\n\n//# sourceURL=webpack:///./src/app.js?");
 
 /***/ }),
 
@@ -104,7 +104,7 @@ eval("//commonjs规范\n//const name = require('./controllers/name')\nvar indexT
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = \"<div class=\\\"container\\\">        <header></header>        <main></main>        <nav>          <ul>            <li>              <i class=\\\"yo-ico\\\">&#xe6b8;</i>              <b>职位2</b>            </li>            <li>              <i class=\\\"yo-ico\\\">&#xe7da;</i>              <b>搜索</b>            </li>            <li>              <i class=\\\"yo-ico\\\">&#xe7d5;</i>              <b>我的</b>            </li>          </ul>        </nav>      </div>\"\n\n//# sourceURL=webpack:///./src/views/index.html?");
+eval("module.exports = \"<div class=\\\"container\\\">  <header>    <div class=\\\"search\\\"><span class=\\\"yo-ico\\\">&#xe650;</span><i>5LUX.COM</i></div><span class=\\\"yo-ico\\\">&#xe6cd;</span>  </header>  <main>    <div class=\\\"swiper-container\\\">      <div class=\\\"swiper-wrapper\\\">        <div class=\\\"swiper-slide\\\">Slide 1</div>        <div class=\\\"swiper-slide\\\">Slide 2</div>        <div class=\\\"swiper-slide\\\">Slide 3</div>      </div>      <!-- 导航按钮 -->      <div class=\\\"swiper-button-prev\\\"></div>      <div class=\\\"swiper-button-next\\\"></div>    </div>    <ul class=\\\"nav\\\">      <li class=\\\"active\\\">        <i class=\\\"yo-ico\\\">&#xe7e5;</i>        <b>上新</b>      </li>      <li>        <i class=\\\"yo-ico\\\">&#xf025a;</i>        <b>海外馆</b>      </li>      <li>        <i class=\\\"yo-ico\\\">&#xe62f;</i>        <b>值得买</b>      </li>      <li>        <i class=\\\"yo-ico\\\">&#xe7e5;</i>        <b>闪购</b>      </li>      <li>        <i class=\\\"yo-ico\\\">&#xe664;</i>        <b>品牌</b>      </li>    </ul>    <div>      <img src=\\\"http://img550.5lux.com.cn/2019/05/31/uv/155929725266_750x586.jpg\\\" alt=\\\"\\\">    </div>  </main>  <nav>    <ul class=\\\"nav\\\">      <li class=\\\"active\\\">        <i class=\\\"yo-ico\\\">&#xe628;</i>        <b>首页</b>      </li>      <li>        <i class=\\\"yo-ico\\\">&#xe7e4;</i>        <b>商城</b>      </li>      <li>        <i class=\\\"yo-ico\\\">&#xe60e;</i>        <b>海外服务</b>      </li>      <li>        <i class=\\\"yo-ico\\\"> &#xe766;</i>        <b>到店</b>      </li>      <li>        <i class=\\\"yo-ico\\\">&#xe78c;</i>        <b>我的</b>      </li>    </ul>  </nav></div>\"\n\n//# sourceURL=webpack:///./src/views/index.html?");
 
 /***/ })
 

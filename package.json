@@ -27,6 +27,8 @@
   "scripts": {
     "dev": "./node_modules/.bin/gulp -f gulpfile-dev.js",
     "prod": "gulp -f gulpfile-prod.js"
+  },
+  "dependencies": {
+    "json-server": "^0.15.0"
   }
-
 }

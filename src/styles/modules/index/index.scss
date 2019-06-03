@@ -1,0 +1,109 @@
+
+@import '../common/icons.scss';
+@import '../libs/swiper.min.css';
+
+// body{
+//     background: #f2f2f2;
+// }
+#app{
+    height: 100%
+}
+.container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    header{
+        height:.44rem;
+        display: flex;
+        padding-right: .17rem;
+        align-items: center;
+        
+        
+        >div{
+            flex: 1;
+            height: .3rem;
+            background: #fff;
+            margin: 0 .16rem 0 .17rem;
+            border-radius: .05rem;
+            background-color: hsla(0,0%,100%,.5);
+            display: flex;
+            align-items: center;
+            span{
+                font-size: .16rem;
+                margin: 0 .08rem;
+            }
+            i{
+                font-size: .16rem;
+            }
+        }
+        span{
+            font-size: .22rem;
+        }
+       
+    }
+    main{
+        flex: 1;
+        overflow-y: auto;
+        .swiper-container{
+            width: 100%;
+            height: 4.55rem;
+            background: aqua;
+        }
+        ul{
+            display: flex;
+            color: #7e8c8d;
+            height: .82rem;
+            li{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+               b{
+                   font-size: .12rem;
+               
+                }
+                i{
+                    font-size: .2rem;
+
+               }
+            }
+        }
+    }
+    nav{
+        height: .48rem;
+        
+        ul{
+            height: .48rem;
+            display: flex;
+            background: black;
+            color: grey;
+            
+            li{
+                height: 100%;
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                &.active{
+                    color: white;
+                    i{
+                        font-weight: 800;
+                    }
+                    
+                }
+                i{
+                    font-size: .2rem;
+                    font-weight: 100;
+                }
+                b{
+                    font-size: .1rem;
+                    font-weight: 100;
+                }
+
+            }
+        }
+    }
+
+}

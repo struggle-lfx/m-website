@@ -115,6 +115,7 @@ function clear(target) {
 function gulpWebserver() {
     return src('./dev')
         .pipe(webserver({
+            host:'localhost',
             port: 8000,
             livereload: true,
             middleware: [
@@ -124,9 +125,16 @@ function gulpWebserver() {
                     pathRewrite: {
                         '^/api': ''
                     }
+                }),
+                proxy('/goodslist', {
+                    target: 'https://m.eastdane.com',
+                    changeOrigin: true,
+                    // pathRewrite: {
+                    //     '^/goodslis': ''
+                    // }
                 })
             ]
-
+            // https://m.eastdane.com/folders/19184/products
         }))
 }
 
