@@ -126,15 +126,24 @@ function gulpWebserver() {
                         '^/api': ''
                     }
                 }),
-                proxy('/goodslist', {
-                    target: 'https://m.eastdane.com',
+                proxy('/index', {
+                    target: 'https://apim.restful.5lux.com.cn',
+                    changeOrigin: true,
+                    // pathRewrite: {
+                    //     '^/goodslis': ''
+                    // }
+                }),
+
+                //https://apim.restful.5lux.com.cn/index/other_advert
+                proxy('/index', {
+                    target: 'https://apim.restful.5lux.com.cn/',
                     changeOrigin: true,
                     // pathRewrite: {
                     //     '^/goodslis': ''
                     // }
                 })
             ]
-            // https://m.eastdane.com/folders/19184/products
+            
         }))
 }
 
