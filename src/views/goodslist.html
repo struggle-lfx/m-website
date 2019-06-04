@@ -1,5 +1,29 @@
-<div>
-    <a href="">
-        <img src="{{data.new_register[0].ad_link}}" alt="">
+<div class="news">
+    <a href="{{data.new_register[0].ad_link}}">
+        <img src="{{data.new_register[0].ad_code}}" alt="">
     </a>
+</div>
+<div class="member">
+    <a href="{{data.vip_member[0].ad_link}}">
+        <img src="{{data.vip_member[0].ad_code}}" alt="">
+    </a>
+    <ul>
+        <li><a href="{{data.vip_member[1].ad_link}}"><img src="{{data.vip_member[1].ad_code}}" alt=""></a></li>
+        <li><a href="{{data.vip_member[2].ad_link}}"><img src="{{data.vip_member[2].ad_code}}" alt=""></a></li>
+        <li><a href="{{data.vip_member[3].ad_link}}"><img src="{{data.vip_member[3].ad_code}}" alt=""></a></li>
+        <li><a href="{{data.vip_member[4].ad_link}}"><img src="{{data.vip_member[4].ad_code}}" alt=""></a></li>
+    </ul>
+</div>
+<ul>
+    <li><a href="{{data.buy_list[0].ad_link}}"><img src="{{data.five_example.ads_info.ad_code}}" alt=""></a>
+    </li>
+    <li><a href="{{data.buy_list[0].ad_link}}"><img src="{{data.buy_list[0].ad_code}}" alt=""></a></li>
+</ul>
+<div class="xiannv">
+        <a href="{{data.article_list[0].ads_info.ad_link}}"><img src="{{data.article_list[0].ads_info.ad_code}}" alt=""></a>
+    <div>
+        
+        <h3>{{data.article_list[0].ads_info.ad_name}}</h3>
+        <p>{{data.article_list[0].ads_info.ad_title}}</p>
+    </div>
 </div>

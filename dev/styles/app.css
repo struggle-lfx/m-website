@@ -724,6 +724,34 @@ a {
   font-family: yofont;
   src: url(/icons/iconfont.woff) format("woff"), url(/icons/iconfont.ttf) format("truetype"); }
 
+.container main #goodslist {
+  margin-bottom: .1rem; }
+  .container main #goodslist .news {
+    margin-bottom: .1rem;
+    width: 100%; }
+    .container main #goodslist .news img {
+      width: 100%; }
+  .container main #goodslist .member {
+    width: 100%; }
+    .container main #goodslist .member img {
+      width: 100%; }
+    .container main #goodslist .member ul {
+      padding: .1rem 0 .1rem .05rem;
+      display: flex;
+      justify-content: space-between; }
+      .container main #goodslist .member ul li {
+        padding-right: .05rem; }
+  .container main #goodslist ul li {
+    padding-bottom: .1rem; }
+    .container main #goodslist ul li img {
+      width: 100%; }
+  .container main #goodslist .xiannv img {
+    width: 100%; }
+  .container main #goodslist .xiannv div {
+    padding: .2rem; }
+    .container main #goodslist .xiannv div h3 {
+      padding-bottom: .18rem; }
+
 #app {
   height: 100%; }
 
@@ -755,10 +783,8 @@ a {
   .container main {
     flex: 1;
     overflow-y: auto; }
-    .container main .swiper-container {
-      background: aqua; }
-      .container main .swiper-container img {
-        width: 100%; }
+    .container main .swiper-container img {
+      width: 100%; }
     .container main > ul {
       display: flex;
       color: #7e8c8d;

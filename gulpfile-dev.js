@@ -49,6 +49,11 @@ function copylibs() {
         .pipe(dest('./dev/libs'))
 }
 
+function copymock() {
+    return src('./src/mock/**/*')
+        .pipe(dest('./dev/mock'))
+}
+
 function copyimgs() {
     return src('./src/imgs/**/*')
         .pipe(dest('./dev/imgs'))
@@ -121,23 +126,15 @@ function gulpWebserver() {
             middleware: [
                 proxy('/api', {
                     target: 'https://m.lagou.com',
-                    changeOrigin: true,
+                    changeOrigin: true,   //访问不同的域名，需要配置成true
                     pathRewrite: {
                         '^/api': ''
                     }
                 }),
-                proxy('/index', {
-                    target: 'https://apim.restful.5lux.com.cn',
-                    changeOrigin: true,
-                    // pathRewrite: {
-                    //     '^/goodslis': ''
-                    // }
-                }),
-
                 //https://apim.restful.5lux.com.cn/index/other_advert
                 proxy('/index', {
-                    target: 'https://apim.restful.5lux.com.cn/',
-                    changeOrigin: true,
+                    target: 'https://apim.restful.5lux.com.cn',
+                    changeOrigin: true
                     // pathRewrite: {
                     //     '^/goodslis': ''
                     // }
@@ -155,6 +152,7 @@ function watcher() {
     watch('./src/imgs/**/*', series(clear('./dev/imgs'), copyimgs))
     watch('./src/icons/**/*', series(clear('./dev/icons'), copyicons))
     watch('./*.html', series(clear('./dev/*.html'), copyhtml))
+    
 }
 //commonjs规范的default可以直接运行
 //exports.  将任务暴露出去，外部就可以访问

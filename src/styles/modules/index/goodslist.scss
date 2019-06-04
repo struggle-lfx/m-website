@@ -1,0 +1,52 @@
+
+.container{
+main {
+    #goodslist{
+        margin-bottom: .1rem;
+        .news{
+            margin-bottom: .1rem;
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+        .member{
+            width: 100%;
+            img{
+                width: 100%;
+            }
+            ul{ 
+                padding:.1rem 0 .1rem .05rem;
+                display: flex;
+                justify-content: space-between;
+                li{
+                    padding-right: .05rem;
+    
+                }
+            }
+        }
+        ul{
+            li{
+                padding-bottom: .1rem;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+
+        .xiannv{
+            img{
+                width: 100%;
+            }
+            div{
+                padding: .2rem;
+                h3{
+                    padding-bottom: .18rem;
+                }
+                
+            }
+        }
+
+    }
+}
+}

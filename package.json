@@ -25,8 +25,9 @@
     "yo3": "^3.1.8"
   },
   "scripts": {
-    "dev": "./node_modules/.bin/gulp -f gulpfile-dev.js",
-    "prod": "gulp -f gulpfile-prod.js"
+    "dev": "gulp -f gulpfile-dev.js",
+    "prod": "gulp -f gulpfile-prod.js",
+     "mock":"json-server ./src/mock/mock.js -p 9000"  
   },
   "dependencies": {
     "json-server": "^0.15.0"
