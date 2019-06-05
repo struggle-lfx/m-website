@@ -39,8 +39,8 @@ main {
                 width: 100%;
             }
             div{
-                margin: .2rem;
                 padding-bottom: .2rem;
+                margin: .2rem .2rem 0 .2rem;
                 @include border(0 0 1px 0);     //border-bottom一像素线
                 h3{
                     padding-bottom: .18rem;
@@ -49,27 +49,30 @@ main {
                 p{
                     font-size: 3.2vw;
                     color: #999;
-                }
-                
+                }                  
             }
         }
-        .list2{
-            padding: 0 .2rem .2rem .2rem;
+        .list2{                  
+            padding: .2rem;
             ul{
+                // width: 4rem;
+                overflow: hidden;
+                overflow-x: auto;
                 display: flex;
+                align-items: center;
                 li{
-                    div{
-                        padding: 0 .23rem;
-                       
-                        
+                    width: 1.3rem;
+                    div{  
+                        padding: 0 .15rem;                                      
                         img{
-                            width: 100%;
-                            height: 1.3rem;
-                            
-                        }
-                        p{
-                            color: #999;
-                        }
+                             height: 1.3rem;                         
+                        }                       
+                    }
+                    p{
+                        width: 1.3rem;
+                        color: #999;
+                        text-align: center;
+                        @include ellipsis(null, 1);
                     }
                  
                 }

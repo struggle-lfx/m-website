@@ -1,0 +1,23 @@
+<div class="list2">
+
+        <div class="xiannv">
+                <a href="{{list0data.ad_link}}"><img src="{{list0data.ad_code}}" alt="">
+                    <div>
+                        <h3>{{list0data.ad_name}}</h3>
+                        <p>{{list0data.ad_title}}</p>
+                    </div>
+                </a>
+            </div>
+        <ul>
+                {{each list0data.product_info}}
+            <li>
+                <a href="#">
+                    <div> <img src="{{$value['product_thumb']}}" alt=""></div>
+                    <p class="name">{{$value['ad_title']}}</p>
+                    <p class="price">{{$value['ad_subtitle']}}</p>
+            </li>
+            {{/each}}
+            
+        </ul>
+    </div>
+    

@@ -750,8 +750,8 @@ a {
     .container main #goodslist .xiannv img {
       width: 100%; }
     .container main #goodslist .xiannv div {
-      margin: .2rem;
       padding-bottom: .2rem;
+      margin: .2rem .2rem 0 .2rem;
       position: relative; }
       .container main #goodslist .xiannv div::after {
         pointer-events: none;
@@ -788,19 +788,31 @@ a {
         font-size: 3.2vw;
         color: #999; }
   .container main #goodslist .list2 {
-    padding: 0 .2rem .2rem .2rem; }
+    padding: .2rem; }
     .container main #goodslist .list2 ul {
-      display: flex; }
-      .container main #goodslist .list2 ul li div {
-        padding: 0 .23rem; }
-        .container main #goodslist .list2 ul li div img {
-          width: 100%;
-          height: 1.3rem; }
-        .container main #goodslist .list2 ul li div p {
-          color: #999; }
+      overflow: hidden;
+      overflow-x: auto;
+      display: flex;
+      align-items: center; }
+      .container main #goodslist .list2 ul li {
+        width: 1.3rem; }
+        .container main #goodslist .list2 ul li div {
+          padding: 0 .15rem; }
+          .container main #goodslist .list2 ul li div img {
+            height: 1.3rem; }
+        .container main #goodslist .list2 ul li p {
+          width: 1.3rem;
+          color: #999;
+          text-align: center;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap; }
 
 body {
   background: #fff; }
+
+a {
+  color: black; }
 
 #app {
   height: 100%; }
@@ -813,7 +825,8 @@ body {
     height: .44rem;
     display: flex;
     padding-right: .17rem;
-    align-items: center; }
+    align-items: center;
+    background: black; }
     .container header > div {
       flex: 1;
       height: .3rem;
@@ -829,7 +842,8 @@ body {
       .container header > div i {
         font-size: .16rem; }
     .container header span {
-      font-size: .22rem; }
+      font-size: .22rem;
+      color: #fff; }
   .container main {
     flex: 1;
     overflow-y: auto; }
