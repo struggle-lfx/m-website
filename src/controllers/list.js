@@ -3,11 +3,9 @@ const goodslistTpl = require('../views/goodslist.html')
 module.exports = {
     goodslist() {
         $.ajax({
-            // url:'../libs/data/goodslist.json',
             url: '/index/other_advert',
             type: 'get',
             success(result) {
-
                 const resultstr = JSON.parse(result);
                 const data = resultstr.data;
                 console.log(data);

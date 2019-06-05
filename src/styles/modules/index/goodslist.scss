@@ -33,7 +33,6 @@ main {
                 }
             }
         }
-
         .xiannv{
             background: white;
             img{
@@ -55,22 +54,22 @@ main {
             }
         }
         .list2{
-            overflow: hidden;
+            padding: 0 .2rem .2rem .2rem;
             ul{
                 display: flex;
                 li{
                     div{
-                        height: 1.3rem;
+                        padding: 0 .23rem;
+                       
+                        
                         img{
                             width: 100%;
-                            height: 100%
+                            height: 1.3rem;
                             
                         }
-                    }
-                    img{
-                        width: 100%;
-                        height: 100%
-                        
+                        p{
+                            color: #999;
+                        }
                     }
                  
                 }
