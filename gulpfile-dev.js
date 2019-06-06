@@ -113,12 +113,12 @@ function gulpWebserver() {
                     }
                 }),
                 //https://apim.restful.5lux.com.cn/index/other_advert
-                proxy('/index', {
+                proxy('/goodslist', {
                     target: 'https://apim.restful.5lux.com.cn',
-                    changeOrigin: true
-                    // pathRewrite: {
-                    //     '^/goodslis': ''
-                    // }
+                    changeOrigin: true,
+                    pathRewrite: {
+                        '^/goodslist': ''
+                    }
                 })
             ]
             

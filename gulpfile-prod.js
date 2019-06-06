@@ -7,6 +7,7 @@ const path = require('path')
 const gulpSass = require('gulp-sass')
 const rev = require('gulp-rev')
 const revCollector = require('gulp-rev-collector')
+const cleanCSS =  require('gulp-clean-css')
 
 //拷贝  index.html 到dist根目录下
 function copyhtml(){
@@ -34,7 +35,7 @@ function copyicons(){
 
 //模块化打包
 function packjs(){
-    return src('./**/*')
+    return src('./src/**/*')
     .pipe(webpackStream({
         mode:'production',  //开发环境
         entry:{

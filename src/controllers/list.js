@@ -1,4 +1,4 @@
-const goodslistTpl = require('../views/goodslist.html')
+const goodslistTpl = require('../views/homeindex/goodslist.html')
 const goodslist0 = require('../views/goods/goods0.html')
 const goodslist1 = require('../views/goods/goods1.html')
 const BScroll = require('better-scroll').default
@@ -6,11 +6,12 @@ const BScroll = require('better-scroll').default
 module.exports = {
     goodslist() {
         $.ajax({
-            url: '/index/other_advert',
+            url: '/goodslist/index/other_advert',
             type: 'get',
             success(result) {
                 const resultstr = JSON.parse(result);
                 const data = resultstr.data;
+                console.log(data);
                 //本次需要用到的数据，但是出现了循环嵌套
                 // console.log(resultstr.data.article_list);
                 // const list0data = resultstr.data.article_list[0].ads_info;

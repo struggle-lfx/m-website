@@ -2,7 +2,7 @@
 module.exports = {
     swipper(){
         $.ajax({
-            url:'/index/index_slider',
+            url:'/goodslist/index/index_slider',
             type:'get',
             success(result){
                 //console.log(result);
