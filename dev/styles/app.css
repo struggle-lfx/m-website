@@ -808,6 +808,18 @@ a {
           text-overflow: ellipsis;
           white-space: nowrap; }
 
+.shop nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  .shop nav ul li {
+    height: .39rem;
+    line-height: .39rem; }
+    .shop nav ul li.active {
+      border-bottom: #999 solid .01rem; }
+    .shop nav ul li a {
+      color: #999; }
+
 body {
   background: #fff; }
 
@@ -878,31 +890,31 @@ a {
             padding-bottom: .07rem; }
             #index .container main div.list1 ul li img {
               width: 100%; }
-    #index .container nav {
+    #index .container > nav {
       height: .48rem; }
-      #index .container nav ul {
+      #index .container > nav ul {
         height: .48rem;
         display: flex;
         background: black;
         color: grey; }
-        #index .container nav ul li {
+        #index .container > nav ul li {
           height: 100%;
           flex: 1;
           display: flex;
           justify-content: center;
           align-items: center;
           flex-direction: column; }
-          #index .container nav ul li.active {
+          #index .container > nav ul li.active {
             color: white; }
-            #index .container nav ul li.active i {
+            #index .container > nav ul li.active i {
               font-weight: 800; }
-          #index .container nav ul li i {
+          #index .container > nav ul li i {
             font-size: .2rem;
             font-weight: 100; }
-          #index .container nav ul li b {
+          #index .container > nav ul li b {
             font-size: .1rem;
             font-weight: 100; }
-            #index .container nav ul li b a {
+            #index .container > nav ul li b a {
               color: #fff; }
 
 /**

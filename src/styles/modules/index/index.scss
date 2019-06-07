@@ -2,7 +2,7 @@
 @import '../common/icons.scss';
 @import './goodslist.scss';
 
-
+@import '../shop/shop.scss';
 body{
     background: #fff;
 }
@@ -105,9 +105,8 @@ a{
             }
         }
     }
-    nav{
-        height: .48rem;
-        
+    >nav{
+        height: .48rem;      
         ul{
             height: .48rem;
             display: flex;
