@@ -1,7 +1,7 @@
-const goodslistTpl = require('../views/homeindex/goodslist.html')
-const goodslist0 = require('../views/goods/goods0.html')
-const goodslist1 = require('../views/goods/goods1.html')
-const BScroll = require('better-scroll').default
+const goodslistTpl = require('../../views/homeindex/goodslist.html')
+// const goodslist0 = require('../views/goods/goods0.html')
+// const goodslist1 = require('../views/goods/goods1.html')
+// const BScroll = require('better-scroll').default
 
 module.exports = {
     goodslist() {

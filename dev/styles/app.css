@@ -724,36 +724,36 @@ a {
   font-family: yofont;
   src: url(/icons/iconfont.woff) format("woff"), url(/icons/iconfont.ttf) format("truetype"); }
 
-.container main #goodslist {
+#index .container main #goodslist {
   margin-bottom: .1rem; }
-  .container main #goodslist .news {
+  #index .container main #goodslist .news {
     margin-bottom: .1rem;
     width: 100%; }
-    .container main #goodslist .news img {
+    #index .container main #goodslist .news img {
       width: 100%; }
-  .container main #goodslist .member {
+  #index .container main #goodslist .member {
     width: 100%; }
-    .container main #goodslist .member img {
+    #index .container main #goodslist .member img {
       width: 100%; }
-    .container main #goodslist .member ul {
+    #index .container main #goodslist .member ul {
       padding: .1rem 0 .1rem .05rem;
       display: flex;
       justify-content: space-between; }
-      .container main #goodslist .member ul li {
+      #index .container main #goodslist .member ul li {
         padding-right: .05rem; }
-  .container main #goodslist > ul li {
+  #index .container main #goodslist > ul li {
     padding-bottom: .1rem; }
-    .container main #goodslist > ul li img {
+    #index .container main #goodslist > ul li img {
       width: 100%; }
-  .container main #goodslist .xiannv {
+  #index .container main #goodslist .xiannv {
     background: white; }
-    .container main #goodslist .xiannv img {
+    #index .container main #goodslist .xiannv img {
       width: 100%; }
-    .container main #goodslist .xiannv div {
+    #index .container main #goodslist .xiannv div {
       padding-bottom: .2rem;
       margin: .2rem .2rem 0 .2rem;
       position: relative; }
-      .container main #goodslist .xiannv div::after {
+      #index .container main #goodslist .xiannv div::after {
         pointer-events: none;
         position: absolute;
         z-index: 999;
@@ -766,41 +766,41 @@ a {
         -webkit-transform-origin: 0 0;
         transform-origin: 0 0; }
         @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {
-          .container main #goodslist .xiannv div::after {
+          #index .container main #goodslist .xiannv div::after {
             width: 100%;
             height: 100%; } }
         @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
-          .container main #goodslist .xiannv div::after {
+          #index .container main #goodslist .xiannv div::after {
             width: 200%;
             height: 200%;
             -webkit-transform: scale(0.5);
             transform: scale(0.5); } }
         @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {
-          .container main #goodslist .xiannv div::after {
+          #index .container main #goodslist .xiannv div::after {
             width: 300%;
             height: 300%;
             -webkit-transform: scale(0.33333);
             transform: scale(0.33333); } }
-      .container main #goodslist .xiannv div h3 {
+      #index .container main #goodslist .xiannv div h3 {
         padding-bottom: .18rem;
         font-size: 3.74rw; }
-      .container main #goodslist .xiannv div p {
+      #index .container main #goodslist .xiannv div p {
         font-size: 3.2vw;
         color: #999; }
-  .container main #goodslist .list2 {
+  #index .container main #goodslist .list2 {
     padding: .2rem; }
-    .container main #goodslist .list2 ul {
+    #index .container main #goodslist .list2 ul {
       overflow: hidden;
       overflow-x: auto;
       display: flex;
       align-items: center; }
-      .container main #goodslist .list2 ul li {
+      #index .container main #goodslist .list2 ul li {
         width: 1.3rem; }
-        .container main #goodslist .list2 ul li div {
+        #index .container main #goodslist .list2 ul li div {
           padding: 0 .15rem; }
-          .container main #goodslist .list2 ul li div img {
+          #index .container main #goodslist .list2 ul li div img {
             height: 1.3rem; }
-        .container main #goodslist .list2 ul li p {
+        #index .container main #goodslist .list2 ul li p {
           width: 1.3rem;
           color: #999;
           text-align: center;
@@ -817,89 +817,93 @@ a {
 #app {
   height: 100%; }
 
-.container {
-  height: 100%;
-  display: flex;
-  flex-direction: column; }
-  .container header {
-    height: .44rem;
+#index {
+  height: 100%; }
+  #index .container {
+    height: 100%;
     display: flex;
-    padding-right: .17rem;
-    align-items: center;
-    background: black; }
-    .container header > div {
+    flex-direction: column; }
+    #index .container header {
+      height: .44rem;
+      display: flex;
+      padding-right: .17rem;
+      align-items: center;
+      background: black; }
+      #index .container header > div {
+        flex: 1;
+        height: .3rem;
+        background: #fff;
+        margin: 0 .16rem 0 .17rem;
+        border-radius: .05rem;
+        background-color: rgba(255, 255, 255, 0.5);
+        display: flex;
+        align-items: center; }
+        #index .container header > div span {
+          font-size: .16rem;
+          margin: 0 .08rem; }
+        #index .container header > div i {
+          font-size: .16rem; }
+      #index .container header span {
+        font-size: .22rem;
+        color: #fff; }
+    #index .container main {
       flex: 1;
-      height: .3rem;
-      background: #fff;
-      margin: 0 .16rem 0 .17rem;
-      border-radius: .05rem;
-      background-color: rgba(255, 255, 255, 0.5);
-      display: flex;
-      align-items: center; }
-      .container header > div span {
-        font-size: .16rem;
-        margin: 0 .08rem; }
-      .container header > div i {
-        font-size: .16rem; }
-    .container header span {
-      font-size: .22rem;
-      color: #fff; }
-  .container main {
-    flex: 1;
-    overflow-y: auto; }
-    .container main .swiper-container img {
-      width: 100%; }
-    .container main > ul {
-      display: flex;
-      color: #7e8c8d;
-      height: .82rem; }
-      .container main > ul > li {
-        flex: 1;
+      overflow-y: auto; }
+      #index .container main .swiper-container img {
+        width: 100%; }
+      #index .container main > ul {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center; }
-        .container main > ul > li b {
-          font-size: .12rem; }
-        .container main > ul > li i {
-          font-size: .2rem; }
-    .container main div.list1 {
-      width: 100%; }
-      .container main div.list1 ul {
-        width: 100%;
+        color: #7e8c8d;
+        height: .82rem; }
+        #index .container main > ul > li {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center; }
+          #index .container main > ul > li b {
+            font-size: .12rem; }
+          #index .container main > ul > li i {
+            font-size: .2rem; }
+      #index .container main div.list1 {
+        width: 100%; }
+        #index .container main div.list1 ul {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-between; }
+          #index .container main div.list1 ul li {
+            width: 49%;
+            padding-bottom: .07rem; }
+            #index .container main div.list1 ul li img {
+              width: 100%; }
+    #index .container nav {
+      height: .48rem; }
+      #index .container nav ul {
+        height: .48rem;
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between; }
-        .container main div.list1 ul li {
-          width: 49%;
-          padding-bottom: .07rem; }
-          .container main div.list1 ul li img {
-            width: 100%; }
-  .container nav {
-    height: .48rem; }
-    .container nav ul {
-      height: .48rem;
-      display: flex;
-      background: black;
-      color: grey; }
-      .container nav ul li {
-        height: 100%;
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column; }
-        .container nav ul li.active {
-          color: white; }
-          .container nav ul li.active i {
-            font-weight: 800; }
-        .container nav ul li i {
-          font-size: .2rem;
-          font-weight: 100; }
-        .container nav ul li b {
-          font-size: .1rem;
-          font-weight: 100; }
+        background: black;
+        color: grey; }
+        #index .container nav ul li {
+          height: 100%;
+          flex: 1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column; }
+          #index .container nav ul li.active {
+            color: white; }
+            #index .container nav ul li.active i {
+              font-weight: 800; }
+          #index .container nav ul li i {
+            font-size: .2rem;
+            font-weight: 100; }
+          #index .container nav ul li b {
+            font-size: .1rem;
+            font-weight: 100; }
+            #index .container nav ul li b a {
+              color: #fff; }
 
 /**
  * Swiper 4.5.0

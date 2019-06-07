@@ -12,6 +12,11 @@ a{
 #app{
     height: 100%
 }
+#index{
+    height: 100%;
+    // display: flex;
+    // flex-direction: column;
+
 .container{
     height: 100%;
     display: flex;
@@ -130,10 +135,14 @@ a{
                 b{
                     font-size: .1rem;
                     font-weight: 100;
+                    a{
+                        color: #fff;
+                    }
                 }
 
             }
         }
     }
 
+}
 }

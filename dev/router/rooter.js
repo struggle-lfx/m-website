@@ -1,9 +1,11 @@
 import index from '../controllers/index'
 import home from '../controllers/home'
-import position from '../controllers/position'
-import search from '../controllers/search'
-import profile from '../controllers/profile'
-import details from '../controllers/details'
+import shop from '../controllers/shop'
+import server from '../controllers/server'
+import my from '../controllers/my'
+import arrival from '../controllers/arrival'
+import main from '../controllers/main'
+
 
 export default class Router {
   constructor(obj) {
@@ -13,10 +15,12 @@ export default class Router {
     this.routes = {
       '/index': index,
       '/index/home': home,
-      '/index/details': details,
-      '/index/home/position': position,
-      '/index/home/search': search,
-      '/index/home/profile': profile
+      '/index/home/main': main,
+      '/index/home/shop': shop,
+      '/index/home/server': server,
+      '/index/home/my': my,
+      '/index/home/arrival': arrival
+
     }
     // 组件挂载根元素
     this.root = $('#main')
@@ -72,8 +76,8 @@ export default class Router {
       var newURL = e.newURL.split('#')[1];
       var oldURL = e.oldURL.split('#')[1];
     }
-    // 获取当前路径,默认'/index'
-    var currentURL = location.hash.slice(1).split('?')[0] || '/index/home/position';
+
+    var currentURL = location.hash.slice(1).split('?')[0] || '/index/home/main';
     this.loadView(currentURL)
   }
   /**
@@ -96,7 +100,7 @@ export default class Router {
       history.replaceState({
         path: '/'
       }, null, '/')
-      currentURL = '/position'
+      currentURL = '/main'
     }
     // 多级链接拆分为数组,遍历依次加载
     this.currentURLlist = currentURL.slice(1).split('/')
