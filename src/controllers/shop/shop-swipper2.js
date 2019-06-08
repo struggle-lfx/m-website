@@ -1,9 +1,9 @@
-const swipperTpl = require('../../views/shop/shop-swipper.html');
+const swipper2Tpl = require('../../views/shop/shop-swipper2.html');
 
 module.exports ={
-        swipper(){
+        swipper2(){
             $.ajax({
-                url:'/goodslist/shop/slide?mtoken=',
+                url:'/goodslist/shop/get_flagship_recommend',
                 type:'get',
                 success(result){
                      const resultarr =JSON.parse(result);

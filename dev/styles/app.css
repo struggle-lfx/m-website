@@ -820,6 +820,143 @@ a {
     .shop nav ul li a {
       color: #999; }
 
+.shop .ul {
+  height: .8rem;
+  display: flex; }
+  .shop .ul li {
+    flex: 1;
+    display: flex; }
+    .shop .ul li a {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #7e8c8d; }
+      .shop .ul li a i {
+        font-size: .3rem;
+        font-weight: 100; }
+      .shop .ul li a b {
+        font-size: .12rem; }
+
+.search {
+  display: flex;
+  flex-direction: column;
+  height: 100%; }
+  .search .search-header {
+    height: .44rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: .1rem;
+    position: relative; }
+    .search .search-header::after {
+      pointer-events: none;
+      position: absolute;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      content: "\0020";
+      border-color: #ccc;
+      border-style: solid;
+      border-width: 0 0 1px 0;
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0; }
+      @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {
+        .search .search-header::after {
+          width: 100%;
+          height: 100%; } }
+      @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
+        .search .search-header::after {
+          width: 200%;
+          height: 200%;
+          -webkit-transform: scale(0.5);
+          transform: scale(0.5); } }
+      @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {
+        .search .search-header::after {
+          width: 300%;
+          height: 300%;
+          -webkit-transform: scale(0.33333);
+          transform: scale(0.33333); } }
+    .search .search-header .input {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      height: .32rem;
+      margin: 0 .11rem 0 .08rem;
+      border-radius: .05rem;
+      background: #f2f2f2; }
+      .search .search-header .input i {
+        font-size: .14rem;
+        margin: 0 .08rem; }
+      .search .search-header .input form {
+        width: 100%; }
+        .search .search-header .input form input {
+          width: 100%;
+          height: .32rem;
+          border: 0;
+          background: #f2f2f2; }
+  .search p {
+    height: .4rem;
+    line-height: .4rem;
+    background: #f2f2f2;
+    padding: 0 .15rem; }
+  .search ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: .1rem .15rem 0 .15rem;
+    align-items: center; }
+    .search ul li {
+      padding: 0 .1rem;
+      height: .32rem;
+      position: relative;
+      margin: 0 .1rem .1rem 0;
+      line-height: .32rem; }
+      .search ul li::after {
+        pointer-events: none;
+        position: absolute;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        content: "\0020";
+        border-color: #ccc;
+        border-style: solid;
+        border-width: 1px;
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0; }
+        @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {
+          .search ul li::after {
+            width: 100%;
+            height: 100%; } }
+        @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
+          .search ul li::after {
+            width: 200%;
+            height: 200%;
+            -webkit-transform: scale(0.5);
+            transform: scale(0.5); } }
+        @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {
+          .search ul li::after {
+            width: 300%;
+            height: 300%;
+            -webkit-transform: scale(0.33333);
+            transform: scale(0.33333); } }
+  .search .tuijian {
+    text-align: center;
+    height: .4rem;
+    line-height: .4rem;
+    background: #f2f2f2;
+    padding: 0 .15rem; }
+  .search .tuijianlist {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row; }
+    .search .tuijianlist .listimg {
+      width: 49%; }
+      .search .tuijianlist .listimg img {
+        width: 100%; }
+
 body {
   background: #fff; }
 
@@ -835,27 +972,26 @@ a {
     height: 100%;
     display: flex;
     flex-direction: column; }
-    #index .container header {
+    #index .container > header {
       height: .44rem;
       display: flex;
       padding-right: .17rem;
       align-items: center;
       background: black; }
-      #index .container header > div {
+      #index .container > header > div {
         flex: 1;
         height: .3rem;
         background: #fff;
         margin: 0 .16rem 0 .17rem;
         border-radius: .05rem;
         background-color: rgba(255, 255, 255, 0.5);
-        display: flex;
-        align-items: center; }
-        #index .container header > div span {
+        display: flex; }
+        #index .container > header > div span {
           font-size: .16rem;
           margin: 0 .08rem; }
-        #index .container header > div i {
+        #index .container > header > div i {
           font-size: .16rem; }
-      #index .container header span {
+      #index .container > header span {
         font-size: .22rem;
         color: #fff; }
     #index .container main {
@@ -895,27 +1031,28 @@ a {
       #index .container > nav ul {
         height: .48rem;
         display: flex;
-        background: black;
-        color: grey; }
+        background: black; }
         #index .container > nav ul li {
-          height: 100%;
           flex: 1;
           display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column; }
-          #index .container > nav ul li.active {
+          height: 100%; }
+          #index .container > nav ul li.active a {
             color: white; }
-            #index .container > nav ul li.active i {
+            #index .container > nav ul li.active a i {
               font-weight: 800; }
-          #index .container > nav ul li i {
-            font-size: .2rem;
-            font-weight: 100; }
-          #index .container > nav ul li b {
-            font-size: .1rem;
-            font-weight: 100; }
-            #index .container > nav ul li b a {
-              color: #fff; }
+          #index .container > nav ul li a {
+            color: grey;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; }
+            #index .container > nav ul li a i {
+              font-size: .2rem;
+              font-weight: 100; }
+            #index .container > nav ul li a b {
+              font-size: .1rem;
+              font-weight: 100; }
 
 /**
  * Swiper 4.5.0

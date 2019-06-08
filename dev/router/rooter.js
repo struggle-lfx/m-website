@@ -6,6 +6,8 @@ import my from '../controllers/my'
 import arrival from '../controllers/arrival'
 import main from '../controllers/main'
 
+import search  from '../controllers/search'
+
 
 export default class Router {
   constructor(obj) {
@@ -15,6 +17,7 @@ export default class Router {
     this.routes = {
       '/index': index,
       '/index/home': home,
+      '/index/search':search,
       '/index/home/main': main,
       '/index/home/shop': shop,
       '/index/home/server': server,
