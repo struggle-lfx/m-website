@@ -1,4 +1,4 @@
-// const swipperTpl = require('../views/swipper.html');
+//  const swipperTpl = require('../views/swipper.html');
 module.exports = {
     swipper(){
         $.ajax({

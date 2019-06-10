@@ -951,7 +951,8 @@ a {
     flex: 1;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row; }
+    flex-direction: row;
+    overflow-y: auto; }
     .search .tuijianlist .listimg {
       width: 49%; }
       .search .tuijianlist .listimg img {

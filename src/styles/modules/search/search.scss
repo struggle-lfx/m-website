@@ -65,6 +65,7 @@
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
+        overflow-y: auto;
         .listimg{
             width: 49%;
             img{

@@ -10,11 +10,11 @@ module.exports ={
                      const data = resultarr.data;
                      console.log(data);
                     //  const renderedSwipperTpl = template.render(swipperTpl, {data})   // 将模板源代码编译成函数并立刻执行 第一个参数 来源 第二个参数{里面传数据} 
-                    //  document.querySelector('.swiper-container').innerHTML = renderedSwipperTpl ;
+                    //  document.querySelector('.swiper-wrapper').innerHTML = renderedSwipperTpl ;
                    
                 }
             })
-            var swiper = new Swiper('.swiper-container', {
+            var swiper = new Swiper('.swiper-wrapper', {
                 //分页
                 pagination: {
                     el: '.swiper-pagination',
