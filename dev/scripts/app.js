@@ -364,7 +364,7 @@ eval("module.exports = \"<div class=\\\"shop\\\">    <nav>        <ul>          
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = \"                                             {{each data}}                                     <div class=\\\"swiper-slide\\\"><a href=\\\"\\\"><img src=\\\"{{$value.silde_original}}\\\" alt=\\\"\\\"></a></div>{{/each}}                                       \"\n\n//# sourceURL=webpack:///./src/views/shop/shop-swipper.html?");
+eval("module.exports = \"{{each data}}<div class=\\\"swiper-slide\\\"><a href=\\\"\\\"><img src=\\\"{{$value.silde_original}}\\\" alt=\\\"\\\"></a></div>{{/each}}\"\n\n//# sourceURL=webpack:///./src/views/shop/shop-swipper.html?");
 
 /***/ }),
 
