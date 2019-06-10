@@ -5,7 +5,7 @@ import server from '../controllers/server'
 import my from '../controllers/my'
 import arrival from '../controllers/arrival'
 import main from '../controllers/main'
-
+import details from '../controllers/details'
 import search  from '../controllers/search'
 
 
@@ -18,6 +18,7 @@ export default class Router {
       '/index': index,
       '/index/home': home,
       '/index/search':search,
+      '/index/details':details,
       '/index/home/main': main,
       '/index/home/shop': shop,
       '/index/home/server': server,
