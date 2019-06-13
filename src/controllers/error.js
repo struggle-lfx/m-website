@@ -1,8 +1,9 @@
 const errorTpl = require('../views/error.html')
 export default {
-  render() {
-    
-    $('#app').html(errorTpl)
+  render() {   
+    const rendererrorTpl = template.render(errorTpl, {})
+    $('#app').html(rendererrorTpl)
   }
 }
+
 
