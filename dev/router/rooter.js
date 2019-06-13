@@ -7,6 +7,7 @@ import arrival from '../controllers/arrival'
 import main from '../controllers/main'
 import details from '../controllers/details'
 import search  from '../controllers/search'
+import error  from '../controllers/error'
 
 
 export default class Router {
@@ -23,7 +24,9 @@ export default class Router {
       '/index/home/shop': shop,
       '/index/home/server': server,
       '/index/home/my': my,
-      '/index/home/arrival': arrival
+      '/index/home/arrival': arrival,
+      '/error':error
+      
 
     }
     // 组件挂载根元素
