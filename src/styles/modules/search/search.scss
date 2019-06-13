@@ -69,11 +69,18 @@
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
+            
             //overflow-y: auto;
             .listimg{
+                text-align: center;
+
                 width: 49%;
                 img{
                     width: 100%;
+                }
+                >div{
+                    @include ellipsis(null, 1);
+                    padding-left: .1rem;
                 }
             }
         }

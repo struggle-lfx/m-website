@@ -4,8 +4,9 @@
 <div class="listimg" data-id="{{$value['product_id']}}">
     
         <img src="{{$value['product_thumb']}}" >
-        <p class="name">{{$value['product_name']}}</p>
-        
+       
+        <div>{{$value['product_name']}}</div>
+        <span>￥{{$value['product_price']}}</span>
     </div>
 {{/each}}
 

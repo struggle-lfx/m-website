@@ -1,1 +1,35 @@
-<h1>详情页-{{id}}</h1>
+<div class="details">
+    <div class="details-container"> 
+
+    
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+
+            {{each data.goods_gallery}}
+            <div class="swiper-slide">
+                <img src="{{$value['filepath']}}" alt="">
+            </div>
+            {{/each}}
+        </div>
+    </div>
+
+    <div class="price">
+        <small>￥</small> <span>{{data.goods_info.good_price}}</span>
+
+        <i>￥{{data.goods_info.market_price}}</i>
+
+        <b>{{data.user_price_info.rank_name}}</b>
+    </div>
+    <div class="jieshao">
+        <p>{{data.goods_info.brand_name}}{{data.goods_info.good_name}}  </p>
+         <span>{{data.goods_info.send_time_name}}</span><i>{{data.goods_info.send_store}}</i>
+    </div>
+</div>
+
+    <ul>
+        <li><a href="#/kefu">客服</a></li>
+        <li><a href="#/gouwudai">购物袋</a></li>
+        <li><a href="#/jiaru">加入购物袋</a></li>
+        <li><a href="#/buy">立即购买</a></li>
+    </ul>
+</div>

@@ -199,7 +199,7 @@ eval("\n\n//# sourceURL=webpack:///./src/controllers/arrival.js?");
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nvar detailsTpl = __webpack_require__(/*! ../views/details.html */ \"./src/views/details.html\");\n\nvar querystring = __webpack_require__(/*! query-string */ \"./node_modules/query-string/index.js\");\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  render: function render() {\n    //location.hash获取url地址，并通过？把地址分成两组，取第二组，然后转换成对象\n    var query = querystring.parse(location.hash.split('?')[1]);\n    console.log(query.id);\n    $.ajax({\n      url: '/goodslist/good/get_good_recommend?product_id=' + query.id,\n      type: 'get',\n      success: function success(result) {\n        var resultstr = JSON.parse(result);\n        console.log(resultstr); // const renderSearchTpl = template.render(detailsTpl, {data})\n        // $('#index').html(renderSearchTpl);\n      }\n    });\n  }\n});\n\n//# sourceURL=webpack:///./src/controllers/details.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nvar detailsTpl = __webpack_require__(/*! ../views/details.html */ \"./src/views/details.html\");\n\nvar querystring = __webpack_require__(/*! query-string */ \"./node_modules/query-string/index.js\");\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  render: function render() {\n    //location.hash获取url地址，并通过？把地址分成两组，取第二组，然后转换成对象\n    var query = querystring.parse(location.hash.split('?')[1]);\n    console.log(query.id);\n    $.ajax({\n      url: '/goodslist/good/goodsdetail/?id=' + query.id + '&from=&mtoken=',\n      type: 'get',\n      success: function success(result) {\n        var resultstr = JSON.parse(result);\n        var data = resultstr.data;\n        console.log(data);\n        var renderSearchTpl = template.render(detailsTpl, {\n          data: data\n        });\n        $('#index').html(renderSearchTpl);\n      }\n    });\n    var swiper = new Swiper('.swiper-container', {\n      //分页\n      pagination: {\n        el: '.swiper-pagination'\n      },\n      //导航按钮\n      navigation: {\n        nextEl: '.swiper-button-next',\n        prevEl: '.swiper-button-prev'\n      },\n      //自动轮播\n      autoplay: {\n        delay: 2500,\n        //时间 毫秒\n        disableOnInteraction: false //用户操作之后是否停止自动轮播默认true \n\n      },\n      loop: true //循环 最后面一个往后面滑动会滑到第一个\n\n    });\n  }\n});\n\n//# sourceURL=webpack:///./src/controllers/details.js?");
 
 /***/ }),
 
@@ -292,7 +292,7 @@ eval("\n\n//# sourceURL=webpack:///./src/controllers/my.js?");
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _router_rooter__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../router/rooter */ \"./src/router/rooter.js\");\nvar _require = __webpack_require__(/*! ./search/searchlist */ \"./src/controllers/search/searchlist.js\"),\n    searchlist = _require.searchlist;\n\nvar searchTpl = __webpack_require__(/*! ../views/search.html */ \"./src/views/search.html\");\n\nvar BScroll = __webpack_require__(/*! better-scroll */ \"./node_modules/better-scroll/dist/bscroll.esm.js\")[\"default\"];\n\n\n\nvar gotopage = function gotopage(id) {\n  //id是gotopage方法传进去的\n  var router = new _router_rooter__WEBPACK_IMPORTED_MODULE_0__[\"default\"]({\n    mode: 'hash'\n  });\n  router.push('/index/details?id=' + id); //跳转到详情页,并且把id传进去\n};\n\nvar render = function render() {\n  var renderSearchTpl = template.render(searchTpl, {});\n  $('#index').html(renderSearchTpl);\n  searchlist();\n  $('.tuijianlist2').on(\"click\", \".listimg\", function () {\n    var id = $(this).attr('data-id');\n    console.log(id);\n    gotopage(id);\n  });\n  var bScroll = new BScroll('.tuijianlist', {\n    probeType: 1,\n    click: true\n  });\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  render: render,\n  gotopage: gotopage\n});\n\n//# sourceURL=webpack:///./src/controllers/search.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _router_rooter__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../router/rooter */ \"./src/router/rooter.js\");\nvar _require = __webpack_require__(/*! ./search/searchlist */ \"./src/controllers/search/searchlist.js\"),\n    searchlist = _require.searchlist;\n\nvar searchTpl = __webpack_require__(/*! ../views/search.html */ \"./src/views/search.html\");\n\nvar BScroll = __webpack_require__(/*! better-scroll */ \"./node_modules/better-scroll/dist/bscroll.esm.js\")[\"default\"];\n\n\n\nvar gotopage = function gotopage(id) {\n  //id是gotopage方法传进去的\n  var router = new _router_rooter__WEBPACK_IMPORTED_MODULE_0__[\"default\"]({\n    mode: 'hash'\n  });\n  router.push('/index/details?id=' + id); //跳转到详情页,并且把id传进去\n};\n\nvar render = function render() {\n  var renderSearchTpl = template.render(searchTpl, {});\n  $('#index').html(renderSearchTpl);\n  searchlist();\n  $('.tuijianlist2').on(\"click\", \".listimg\", function () {\n    var id = $(this).attr('data-id');\n    gotopage(id);\n  });\n  var bScroll = new BScroll('.tuijianlist', {\n    probeType: 1,\n    click: true\n  });\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  render: render,\n  gotopage: gotopage\n});\n\n//# sourceURL=webpack:///./src/controllers/search.js?");
 
 /***/ }),
 
@@ -371,7 +371,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = \"<h1>详情页-{{id}}</h1>\"\n\n//# sourceURL=webpack:///./src/views/details.html?");
+eval("module.exports = \"<div class=\\\"details\\\">    <div class=\\\"details-container\\\">         <div class=\\\"swiper-container\\\">        <div class=\\\"swiper-wrapper\\\">            {{each data.goods_gallery}}            <div class=\\\"swiper-slide\\\">                <img src=\\\"{{$value[\\'filepath\\']}}\\\" alt=\\\"\\\">            </div>            {{/each}}        </div>    </div>    <div class=\\\"price\\\">        <small>￥</small> <span>{{data.goods_info.good_price}}</span>        <i>￥{{data.goods_info.market_price}}</i>        <b>{{data.user_price_info.rank_name}}</b>    </div>    <div class=\\\"jieshao\\\">        <p>{{data.goods_info.brand_name}}{{data.goods_info.good_name}}  </p>         <span>{{data.goods_info.send_time_name}}</span><i>{{data.goods_info.send_store}}</i>    </div></div>    <ul>        <li><a href=\\\"#/kefu\\\">客服</a></li>        <li><a href=\\\"#/gouwudai\\\">购物袋</a></li>        <li><a href=\\\"#/jiaru\\\">加入购物袋</a></li>        <li><a href=\\\"#/buy\\\">立即购买</a></li>    </ul></div>\"\n\n//# sourceURL=webpack:///./src/views/details.html?");
 
 /***/ }),
 
@@ -382,7 +382,7 @@ eval("module.exports = \"<h1>详情页-{{id}}</h1>\"\n\n//# sourceURL=webpack://
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = \"<h1>页面正在开发中，敬请期待</h1>\"\n\n//# sourceURL=webpack:///./src/views/error.html?");
+eval("module.exports = \"<div class=\\\"error\\\">    <h1>页面正在开发中，敬请期待</h1></div>\"\n\n//# sourceURL=webpack:///./src/views/error.html?");
 
 /***/ }),
 
@@ -448,7 +448,7 @@ eval("module.exports = \"<div class=\\\"search\\\">    <div>        <div class=\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = \"{{each data}}<div class=\\\"listimg\\\" data-id=\\\"{{$value[\\'product_id\\']}}\\\">            <img src=\\\"{{$value[\\'product_thumb\\']}}\\\" >        <p class=\\\"name\\\">{{$value[\\'product_name\\']}}</p>            </div>{{/each}}\"\n\n//# sourceURL=webpack:///./src/views/search/searchlist.html?");
+eval("module.exports = \"{{each data}}<div class=\\\"listimg\\\" data-id=\\\"{{$value[\\'product_id\\']}}\\\">            <img src=\\\"{{$value[\\'product_thumb\\']}}\\\" >               <div>{{$value[\\'product_name\\']}}</div>        <span>￥{{$value[\\'product_price\\']}}</span>    </div>{{/each}}\"\n\n//# sourceURL=webpack:///./src/views/search/searchlist.html?");
 
 /***/ }),
 

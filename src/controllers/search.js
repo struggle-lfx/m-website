@@ -13,7 +13,6 @@ const render = ()=>{
   searchlist();
   $('.tuijianlist2').on("click",".listimg",function(){
     let id = $(this).attr('data-id')
-    console.log(id);
     gotopage(id);
   })
 
