@@ -1056,6 +1056,10 @@ a {
               font-size: .1rem;
               font-weight: 100; }
 
+h1 {
+  font-size: .3rem;
+  background: antiquewhite; }
+
 /**
  * Swiper 4.5.0
  * Most modern mobile touch slider and framework with hardware accelerated transitions

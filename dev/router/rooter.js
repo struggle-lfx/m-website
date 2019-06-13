@@ -7,6 +7,7 @@ import arrival from '../controllers/arrival'
 import main from '../controllers/main'
 import details from '../controllers/details'
 import search  from '../controllers/search'
+import error from '../controllers/error'
 
 
 export default class Router {
@@ -19,6 +20,7 @@ export default class Router {
       '/index/home': home,
       '/index/search':search,
       '/index/details':details,
+      '/index/error':error,
       '/index/home/main': main,
       '/index/home/shop': shop,
       '/index/home/server': server,
@@ -160,11 +162,11 @@ export default class Router {
    */
   errorPage() {
     if (this.mode === 'hash') {
-      location.href = '#/error'
+      location.href = '#/index/error'
     } else {
       history.replaceState({
-        path: '/error'
-      }, null, '/error')
+        path: '/index/error'
+      }, null, '/index/error')
       this.loadView('/error')
     }
   }
