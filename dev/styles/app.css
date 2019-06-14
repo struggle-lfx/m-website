@@ -1073,12 +1073,10 @@ a {
   height: 100%; }
   .details .details-container {
     flex: 1; }
-    .details .details-container .swiper-container {
-      overflow-x: auto; }
-      .details .details-container .swiper-container .swiper-slide {
+    .details .details-container .swiper-container .swiper-slide {
+      width: 100%; }
+      .details .details-container .swiper-container .swiper-slide img {
         width: 100%; }
-        .details .details-container .swiper-container .swiper-slide img {
-          width: 100%; }
     .details .details-container .price {
       padding: .2rem .15rem .5rem; }
       .details .details-container .price small {
