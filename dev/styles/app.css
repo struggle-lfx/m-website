@@ -1008,6 +1008,8 @@ a {
       #index .container main .swiper-container img {
         width: 100%; }
       #index .container main > ul {
+        position: sticky;
+        top: 0;
         display: flex;
         color: #7e8c8d;
         height: .82rem; }

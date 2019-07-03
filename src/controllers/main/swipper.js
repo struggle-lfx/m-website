@@ -1,4 +1,4 @@
-//  const swipperTpl = require('../views/swipper.html');
+  //const swipperTpl = require('../../views/home/homeswipper.html');
 module.exports = {
     swipper(){
         $.ajax({
@@ -6,12 +6,12 @@ module.exports = {
             type:'get',
             success(result){
                 //console.log(result);
-                // const resultarr =JSON.parse(result);
-                // const data = resultarr.data;
-                // console.log(data);
+                const resultarr =JSON.parse(result);
+                const data = resultarr.data;
+                console.log(data);
                 // const renderedSwipperTpl = template.render(swipperTpl, {data})   // 将模板源代码编译成函数并立刻执行 第一个参数 来源 第二个参数{里面传数据} 
                 // document.querySelector('.swiper-container').innerHTML = renderedSwipperTpl ;
- 
+
             }
         })
         var swiper = new Swiper('.swiper-container', {
@@ -31,6 +31,7 @@ module.exports = {
             },
             loop:true,//循环 最后面一个往后面滑动会滑到第一个
         }); 
+        
           
     }
 
